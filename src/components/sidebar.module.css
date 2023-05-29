@@ -1,0 +1,8 @@
+.label {
+  width: 0;
+  transition: transform 0.3s ease-in-out, width 0.5s ease-in-out;
+}
+
+.show {
+  width: 104px;
+}

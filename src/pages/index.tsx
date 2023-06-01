@@ -20,8 +20,8 @@ export default function Home() {
       <div className="col-sm-8">
         <TopNavBar
           companyName="Ayda (Trading as Parcity Limited)"
-          isVerified={true}
-          name="Shifra"
+          isVerified={false}
+          text="Hello Shifra,"
         />
         <div className="p-2 ps-3 min-vh-100">
           <Card className="p-2">

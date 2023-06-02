@@ -8,8 +8,6 @@ export default function Projects() {
             <Sidebar />
             <div className="w-100">
                 <TopNavBar
-                    // companyName="Ayda (Trading as Parcity Limited)"
-                    // isVerified={true}
                     text="Create Project"
                 />
                 <div className="p-2 ps-3 min-vh-100">

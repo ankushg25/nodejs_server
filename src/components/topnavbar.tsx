@@ -6,7 +6,7 @@ type TopNavBarProps = {
 
 const TopNavBar = (props: TopNavBarProps) => {
   return (
-    <div className="pt-0 me-2 mb-2 d-flex justify-content-between bg-light rounded-end">
+    <div className="pt-0 d-flex justify-content-between bg-light">
       <div className="p-4">
         <div className="fw-semibold">{props.text}</div>
         <div className="fs-6 text-secondary">

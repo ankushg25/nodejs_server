@@ -10,7 +10,7 @@ export default function Projects() {
                 <TopNavBar
                     text="Create Project"
                 />
-                <div className="p-2 ps-3 min-vh-100">
+                <div className="min-vh-100">
                     <Wizard />
                 </div>
             </div>

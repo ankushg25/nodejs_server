@@ -1,4 +1,4 @@
-import { ActivityItem, ListItems } from "./helpers_types";
+import { ActivityItem, CreateProject, ListItems } from "./helpers_types";
 
 export const EVENT_TYPE_MAP: ListItems = {
   RESERCHER_ADDED: {
@@ -116,3 +116,47 @@ export const SIDEBAR_MENU_ITEMS: ListItems = {
     label: "Templates",
   },
 };
+
+
+export const CREATE_PROJECT_DATA: CreateProject[] = [
+  {
+    title: "Research Type",
+    body: "Please choose the type of research you will be conducting. This will help us provide the best experience for you.",
+    type: "radio",
+    values: [
+      "Payment Only", "In-depth Interviews", "Usability Testing (moderated)", "Usability Testing (unmoderated)", "Diary Study", "Focus Group"
+    ]
+  },
+  {
+    title: "Features",
+    body: "Add Features you would like in your project. You can come back and edit this anytime.",
+    type: "checkbox",
+    values: [
+      "Recruit Participants", "Screen Participants", "Send a Survey", "Get Concent", "Schedule Session", "Pay Incentives"
+    ]
+  },
+  {
+    title: "Details",
+    body: "",
+    type: "checkbox",
+    values: []
+  },
+  {
+    title: "Researcher",
+    body: "",
+    type: "checkbox",
+    values: []
+  },
+  {
+    title: "Summary",
+    body: "",
+    type: "checkbox",
+    values: []
+  },
+  {
+    title: "Confirmation",
+    body: "",
+    type: "checkbox",
+    values: []
+  }
+]

@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import Sidebar from "@/components/sidebar";
 import TopNavBar from "@/components/topnavbar";
-import ActivityTimeline from "@/components/activityTimeline";
+import ActivityTimeline from "@/components/activity-timeline";
 
 export default function Home() {
   return (
@@ -115,7 +115,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <ActivityTimeline key="activity_timeline" />
+      <ActivityTimeline />
     </main>
   );
 }

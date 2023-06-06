@@ -1,7 +1,7 @@
 import { SIDEBAR_MENU_ITEMS } from "@/helpers/static_data";
 import { useState } from "react";
 import { Col, Image, ListGroupItem } from "react-bootstrap";
-import styles from "./sidebar.module.css";
+import styles from "./sidebar.module.scss";
 
 const Sidebar = () => {
   const handleShow = () => {

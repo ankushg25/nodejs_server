@@ -1,12 +1,13 @@
-type IconProps = {
-  bi_icon_class: string;
-  color_class: string;
-};
+interface IconProps {
+  biIconClass: string;
+  colorClass: string;
+}
 
-const Icon = (props: IconProps): JSX.Element => {
-  return (
-    <i className={`${props.bi_icon_class} ${props.color_class} fs-3 px-2`}></i>
-  );
+const Icon = ({
+  biIconClass,
+  colorClass = "text-success",
+}: IconProps): JSX.Element => {
+  return <i className={`${biIconClass} ${colorClass} fs-3 px-2`}></i>;
 };
 
 export default Icon;

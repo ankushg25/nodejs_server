@@ -1,7 +1,17 @@
 import { ACTIVITY_FEED_ITEMS, EVENT_TYPE_MAP } from "@/helpers/static_data";
 import { Badge, ListGroup, ListGroupItem } from "react-bootstrap";
-import styles from "./activityTimeline.module.css";
+import styles from "./activity-timeline.module.scss";
 import { dateOptions, timeOptions } from "@/helpers/const_maps";
+
+function renderBadge(unread: boolean) {
+  if (unread)
+    return (
+      <Badge pill bg="primary" className="mx-1">
+        New
+      </Badge>
+    );
+  return <></>;
+}
 
 const ActivityTimeline = () => {
   return (
@@ -15,7 +25,6 @@ const ActivityTimeline = () => {
       <div className="px-3 ">
         {ACTIVITY_FEED_ITEMS.map((item, idx) => {
           const dateObj = new Date(item.timestamp);
-
           const dateString = new Intl.DateTimeFormat(
             "en-GB",
             dateOptions
@@ -42,13 +51,7 @@ const ActivityTimeline = () => {
                 >
                   <div>
                     {dateString}
-                    {item.unread ? (
-                      <Badge pill bg="primary" className="mx-1">
-                        New
-                      </Badge>
-                    ) : (
-                      ""
-                    )}
+                    {renderBadge(item.unread)}
                   </div>
                   <div>{timeString}</div>
                 </ListGroupItem>

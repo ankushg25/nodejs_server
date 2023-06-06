@@ -1,19 +1,26 @@
-import { MouseEventHandler } from "react"
-import { Form } from "react-bootstrap"
-import { FormCheckType } from "react-bootstrap/esm/FormCheck"
+import { Form } from "react-bootstrap";
+import { FormCheckType } from "react-bootstrap/esm/FormCheck";
 
-type ChcekAndRadioProps = {
-    type: FormCheckType,
-    key: string,
-    values: string[],
-    checked: Function
+interface ChcekAndRadioProps {
+  type: FormCheckType;
+  id: string;
+  values: string[];
+  checked: Function;
 }
-export default function RadioAndCheckbox(props: ChcekAndRadioProps): JSX.Element {
-    return (
-        <Form>
-            {
-                props.values.map(item => (<Form.Check className="py-2" type={props.type} id={props.key} label={item} />))
-            }
-        </Form>
-    )
+export default function RadioAndCheckbox(
+  props: ChcekAndRadioProps
+): JSX.Element {
+  return (
+    <Form>
+      {props.values.map((item, idx) => (
+        <Form.Check
+          key={`${props.id}-${idx}`}
+          className="py-2"
+          type={props.type}
+          id={`${props.id}-${idx}`}
+          label={item}
+        />
+      ))}
+    </Form>
+  );
 }

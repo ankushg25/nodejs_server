@@ -1,8 +1,8 @@
-type TopNavBarProps = {
+interface TopNavBarProps {
   text: string;
   companyName?: string;
   isVerified?: boolean;
-};
+}
 
 const TopNavBar = (props: TopNavBarProps) => {
   return (
